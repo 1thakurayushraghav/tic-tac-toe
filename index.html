@@ -2,38 +2,52 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARgames</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARgames - Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="mgs-container hide">
-        <p id="mgs">Winner</p>
-        <button id="new-btn">New Game</button>
+  <header>
+    <h1>🎮 Welcome to ARgames</h1>
+    <p class="tagline">Test your skills with a fun game of Tic Tac Toe!</p>
+  </header>
+
+  <div class="scoreboard">
+    <p>Player O: <span id="scoreO">0</span></p>
+    <p>Player X: <span id="scoreX">0</span></p>
+    <p>Draws: <span id="draws">0</span></p>
+  </div>
+
+  <div class="mgs-container hide">
+    <p id="msg">Winner</p>
+    <button id="new-btn">New Game</button>
+  </div>
+
+  <main>
+    <h2>Play Tic Tac Toe</h2>
+    <div class="container">
+      <div class="game">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+      </div>
     </div>
-    <main>
-        <h1> Tic Tac Toe</h1>
-        <div class="container">
-            <div class="game">
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-            </div>
-        </div> 
-        <button id="reset-btn">Reset Game</button>
-        
+    <button id="reset-btn">Reset Game</button>
+  </main>
 
-    </main>
+  <footer>
+    <p>✨ Created by <strong>Ayush</strong> | ARgames 2025</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
