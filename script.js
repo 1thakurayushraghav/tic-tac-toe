@@ -31,6 +31,8 @@ const resetGame = () => {
 
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
+    if (box.innerText !== "") return; // prevent overwrite
+
     if (turnO) {
       box.innerText = "O";
       box.style.color = "#0984e3"; // Blue for O
@@ -40,7 +42,6 @@ boxes.forEach((box) => {
       box.style.color = "#d63031"; // Red for X
       turnO = true;
     }
-    box.disabled = true;
     count++;
 
     let isWinner = checkWinner();
@@ -51,12 +52,12 @@ boxes.forEach((box) => {
 });
 
 const disableBoxes = () => {
-  boxes.forEach((box) => (box.disabled = true));
+  boxes.forEach((box) => (box.style.pointerEvents = "none"));
 };
 
 const enableBoxes = () => {
   boxes.forEach((box) => {
-    box.disabled = false;
+    box.style.pointerEvents = "auto";
     box.innerText = "";
   });
 };
@@ -89,7 +90,7 @@ const checkWinner = () => {
     if (pos1 !== "" && pos1 === pos2 && pos2 === pos3) {
       showWinner(pos1);
       return true;
-    }git 
+    }
   }
   return false;
 };
